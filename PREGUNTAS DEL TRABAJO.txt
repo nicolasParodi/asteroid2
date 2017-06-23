@@ -1,0 +1,33 @@
+1) Que es un Rigidbody 2D?
+2) Que significa que un Rigidbody sea Kinematic?
+3) Que es un BoxCollider2D?
+4) Como se detecta una colision?
+5) Que es un trigger?
+6) Como se detecta si un trigger fue activado?
+7) Implementar: Player(nave) que dispare balas y destruya objetos.
+
+
+1- Un Rigidbody2D funciona igual que un Rigidbody3D. Lo que hace es poner a un sprite bajo control de las fisicas 
+del engine. Esto quiere decir que el sprite va a ser afectado por gravedad y va a poder moverse por fuerzas aplicadas 
+mediante codigo.
+
+2- Si el kinematic esta habilitado, el rigidbody no va a ser afectado ni por fuerzas ni colisiones. Solo se vera afectado 
+por las animaciones o el control mediante scripts, cambiando el transform.position. Estos rigidbody soy particularmente 
+usados para hacer personajes que son normalmente manejados por una animacion, pero en algunos casos puede ser 
+cambiado rapidamente en un ragdoll desactivando el kinematic.
+
+3- El BoxCollider2D es un componente con el cual se puede poner colision y usarlo con las fisicas 2D. Es un rectangulo 
+con una posicion, un ancho y un alto, en una posicion de coordenadas.
+
+4- Hay varios tipos de Colliders, como el CircleCollider2D, EdgeCollider2D y el BoxCollider2D.. esto para cuando se
+trabaja en GameObjects2D, y son utilizados para las fisicas de dicho GameObject. Una colision entre dos GameObjects
+se puede detectar mediante codigo, que la posicion de uno nunca sea igual a la posicion del otro, haciendo que se
+detenga o que rebote, aplicando una fuerza igual o mayor en el sentido opuesto.
+
+5- Un Collider configurado como Trigger  hace que el GameObject no se comporte como un objeto solido, por lo que
+los demas Colliders van a poder pasar a través de él.
+
+6- La forma de detectarlo es cuando un collider entra en su espacio, un Trigger llama a la funcion OnTriggerEnter en
+los scrpts del Trigger del objeto.
+
+

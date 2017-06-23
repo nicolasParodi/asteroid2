@@ -1,0 +1,731 @@
+fileFormatVersion: 2
+guid: f26cd5b33328a384da103df93e3cfe3b
+timeCreated: 1478039326
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Misiles_0
+    21300002: Misiles_1
+    21300004: Misiles_2
+    21300006: Misiles_3
+    21300008: Misiles_4
+    21300010: Misiles_5
+    21300012: Misiles_6
+    21300014: Misiles_7
+    21300016: Misiles_8
+    21300018: Misiles_9
+    21300020: Misiles_10
+    21300022: Misiles_11
+    21300024: Misiles_12
+    21300026: Misiles_13
+    21300028: Misiles_14
+    21300030: Misiles_15
+    21300032: Misiles_16
+    21300034: Misiles_17
+    21300036: Misiles_18
+    21300038: Misiles_19
+    21300040: Misiles_20
+    21300042: Misiles_21
+    21300044: Misiles_22
+    21300046: Misiles_23
+    21300048: Misiles_24
+    21300050: Misiles_25
+    21300052: Misiles_26
+    21300054: Misiles_27
+    21300056: Misiles_28
+    21300058: Misiles_29
+    21300060: Misiles_31
+    21300062: Misiles_32
+    21300064: Misiles_34
+    21300066: Misiles_35
+    21300068: Misiles_36
+    21300070: Misiles_37
+    21300072: Misiles_38
+    21300074: Misiles_39
+    21300076: Misiles_40
+    21300078: Misiles_41
+    21300080: Misiles_42
+    21300082: Misiles_43
+    21300084: Misiles_44
+    21300086: Misiles_45
+    21300088: Misiles_46
+    21300090: Misiles_47
+    21300092: Misiles_48
+    21300094: Misiles_30
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Misiles_0
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 473
+        width: 25
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Misiles_1
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 433
+        width: 28
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Misiles_2
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 433
+        width: 25
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Misiles_3
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 433
+        width: 24
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Misiles_4
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 433
+        width: 26
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Misiles_5
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 434
+        width: 26
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Misiles_6
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 433
+        width: 32
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Misiles_7
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 395
+        width: 26
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Misiles_8
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 395
+        width: 32
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Misiles_9
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 291
+        width: 30
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Misiles_10
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 291
+        width: 24
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Misiles_11
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 291
+        width: 26
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Misiles_12
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 291
+        width: 26
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Misiles_13
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 291
+        width: 26
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Misiles_14
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 291
+        width: 28
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Misiles_15
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 318
+        width: 26
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Misiles_16
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 316
+        width: 28
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Misiles_17
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 242
+        width: 24
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Misiles_18
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 239
+        width: 26
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Misiles_19
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 284
+        width: 5
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Misiles_20
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 152
+        width: 32
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Misiles_21
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 152
+        width: 26
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Misiles_22
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 152
+        width: 26
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Misiles_23
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 152
+        width: 26
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Misiles_24
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 152
+        width: 25
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Misiles_25
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 151
+        width: 25
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Misiles_26
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 243
+        width: 10
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Misiles_27
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 164
+        width: 26
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Misiles_28
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 164
+        width: 26
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Misiles_29
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 205
+        width: 16
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Misiles_31
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 171
+        width: 21
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Misiles_32
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 168
+        width: 80
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Misiles_34
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 90
+        width: 30
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Misiles_35
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 88
+        width: 24
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Misiles_36
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 12
+        width: 32
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Misiles_37
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 12
+        width: 26
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Misiles_38
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 12
+        width: 26
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Misiles_39
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 12
+        width: 25
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Misiles_40
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 12
+        width: 24
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Misiles_41
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 12
+        width: 26
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Misiles_42
+      rect:
+        serializedVersion: 2
+        x: 377
+        y: 12
+        width: 30
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Misiles_43
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 127
+        width: 75
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Misiles_44
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 92
+        width: 67
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Misiles_45
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 12
+        width: 32
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Misiles_46
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 12
+        width: 26
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Misiles_47
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 55
+        width: 59
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Misiles_48
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 18
+        width: 50
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Misiles_30
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 211
+        width: 80
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
