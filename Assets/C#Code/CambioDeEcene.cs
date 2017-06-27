@@ -9,6 +9,7 @@ public class CambioDeEcene : MonoBehaviour {
     {
         SceneManager.LoadScene(nombre);
     }
+
     public void Salir()
     {
         Application.Quit();
