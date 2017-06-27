@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class GameScore : MonoBehaviour {
 
-	Text scoreTextUI;
+	public Text scoreTextUI;
+    //public Text highScoreText;
 
-	int score;
+    int score;
+    string higScoreStr;
 
-	public int Score
+
+    public int Score
 	{
 		get
 		{
@@ -25,12 +28,19 @@ public class GameScore : MonoBehaviour {
 	void Start () 
 	{
 		scoreTextUI = GetComponent<Text> ();
-	}
+        //highScoreText = GetComponent<Text>();
+        //highScoreText.text = higScoreStr;
+    }
 	
 	// Update is called once per frame
 	void UpdateScoreTextUI ()
 	{
 		string scoreStr = string.Format ("{0:0000000}", score);
 		scoreTextUI.text = scoreStr;
+       /* if (score> PlayerPrefs.GetInt("HighScoreTextTag", 0))
+        {
+            PlayerPrefs.SetInt("HighScoreTextTag", score);
+            higScoreStr = string.Format("{0:0000000}", score);
+        }*/
 	}
 }

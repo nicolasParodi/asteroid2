@@ -51,7 +51,9 @@ public class PlayerController : MonoBehaviour {
     {
         Posicion = transform;
         spaceShipRigidBody = GetComponent<Rigidbody2D>();
-	}
+        lives = MaxLives;
+        LivesUIText.text = lives.ToString();
+    }
 
 	void Update () {
 		if (Input.GetButton ("Fire1") && Time.time > nextFire && disparoDerecha) {
