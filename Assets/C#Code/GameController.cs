@@ -1,63 +1,83 @@
 ﻿using UnityEngine;
-using System.Collections;
 using UnityEngine.SceneManagement;
 
-public class GameController : MonoBehaviour {
+public class GameController : MonoBehaviour
+{
 
-	[SerializeField]
-	private Vector3 spawnValues;
-	[SerializeField]
-	private float spawnWait;
+	public GameObject playButton;
+	public GameObject playShip;
+	public GameObject asteroids;
+	public GameObject gameOver;
+	public GameObject scoreText;
 
-	public GUIText scoreText, restartText, gameOverText;
-
-	private int score;
-	private bool gameOver, restart;
-
-	void Start () {
-		score = 0;
-		gameOver = false;
-		restart = false;
-		gameOverText.text = "";
-		restartText.text = "";
-		UpdateScore ();
-		StartCoroutine (SpawnWaves ());
+	public enum GameManagerState
+	{
+		Opening,
+		Gameplay,
+		GameOver,
+        Restart,
 	}
 
-	void Update () {
-		if (restart) {
-			if (Input.GetKeyDown (KeyCode.R)) {
-				SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-			}
-		}
+	GameManagerState GMState;
+
+	void Start ()
+	{
+		GMState = GameManagerState.Opening;
 	}
 
-	IEnumerator SpawnWaves () {
-		ObjectPool activate = GameObject.Find("GameController").GetComponent<ObjectPool>();
-		while (!gameOver) {
-			Vector3 spawnPosition = new Vector3 (Random.Range(-spawnValues.x, spawnValues.x), spawnValues.y, spawnValues.z);
-			Quaternion spawnRotation = Quaternion.identity;
-			activate.ActivateObjects (spawnPosition, spawnRotation);
-			yield return new WaitForSeconds (spawnWait);
-		}
-		if (gameOver) {
-			restartText.text = "Press 'R' for restart";
-			restart = true;
-		}
+	void UpdateGameManagerState ()
+	{
+		switch (GMState)
+		{
+		case GameManagerState.Opening:
+			gameOver.SetActive (false);
+            //RestartButton.SetActive(false);
+            //ExitButton.SetActive(true);
+            playButton.SetActive (true);
+			break;
+		case GameManagerState.Gameplay:
+			scoreText.GetComponent<GameScore> ().Score = 0;
+			playButton.SetActive (false);
+            //RestartButton.SetActive(false);
+            //ExitButton.SetActive(false);
+            playShip.GetComponent<PlayerController> ().Init ();
+			asteroids.GetComponent<AsteroidsSpawn> ().Init ();
+			break;
+
+		case GameManagerState.GameOver:
+			asteroids.GetComponent<AsteroidsSpawn> ().Stop ();
+			gameOver.SetActive (true);
+            Invoke("ChangeToOpeningState", 2.5f); //cambiar a restart case
+			break;
+
+        case GameManagerState.Restart:
+             gameOver.SetActive(false);
+             //RestartButton.SetActive(true);
+             //ExitButton.SetActive(true);
+             break;
+        }
 	}
 
-	public void AddScore (int newScoreValue){
-		score += newScoreValue;
-		UpdateScore ();
+	public void SetGameManagerState(GameManagerState state)
+	{
+		GMState = state;
+		UpdateGameManagerState ();
 	}
 
-	void UpdateScore () {
-		scoreText.text = "Score: " + score;
+	public void StartGamePlay ()
+	{
+		GMState = GameManagerState.Gameplay;
+		UpdateGameManagerState ();
 	}
 
-	public void GameOver () {
-		gameOverText.text = "Gueim ober pls git gud...";
-		gameOver = true;
+	public void ChangeToOpeningState()
+	{
+		SetGameManagerState (GameManagerState.Opening);
+	}
+
+	public void GameOver()
+	{
+		SetGameManagerState (GameManagerState.GameOver);
 	}
 
 }

@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Crash : MonoBehaviour {
+public class Destroyer : MonoBehaviour 
+{
 
-	void OnTriggerEnter(Collider col)
+	void DestroyGameObject()
 	{
-		TextManager.LoseLife (1);
 		Destroy (gameObject);
 	}
 }
