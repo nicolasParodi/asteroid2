@@ -4,43 +4,26 @@ using UnityEngine;
 
 public class GameScore : MonoBehaviour {
 
-	public Text scoreTextUI;
-    //public Text highScoreText;
-
-    int score;
-    string higScoreStr;
+    Text scoreTextUI;
+    Text highScoreTextUI;
 
 
-    public int Score
-	{
-		get
-		{
-			return this.score;
-		}
-		set
-		{
-			this.score = value;
-			UpdateScoreTextUI ();
-		}
-	}
-
-	// Use this for initialization
 	void Start () 
 	{
-		scoreTextUI = GetComponent<Text> ();
-        //highScoreText = GetComponent<Text>();
-        //highScoreText.text = higScoreStr;
+        scoreTextUI = GameObject.FindGameObjectWithTag("ScoreTextTag").GetComponent<Text>();
+        highScoreTextUI = GameObject.FindGameObjectWithTag("HighScoreTextTag").GetComponent<Text>();
     }
-	
-	// Update is called once per frame
-	void UpdateScoreTextUI ()
+
+
+    public void UpdateScoreTextUI ()
 	{
-		string scoreStr = string.Format ("{0:0000000}", score);
+		string scoreStr = string.Format ("{0:0000000}", GameData.score);
 		scoreTextUI.text = scoreStr;
-       /* if (score> PlayerPrefs.GetInt("HighScoreTextTag", 0))
-        {
-            PlayerPrefs.SetInt("HighScoreTextTag", score);
-            higScoreStr = string.Format("{0:0000000}", score);
-        }*/
 	}
+
+    public void UpdateHighScoreTextUI()
+    {
+        string scoreStr = string.Format("{0:0000000}", GameData.highScore);
+        highScoreTextUI.text = scoreStr;
+    }
 }
