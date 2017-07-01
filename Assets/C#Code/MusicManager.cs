@@ -12,13 +12,9 @@ public class MusicManager : MonoBehaviour {
     {
         AudioManager.instance.PlayMusic(menuTheme, 2);
 	}
-	
-	// Update is called once per frame
-	void Update ()
+
+    void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            AudioManager.instance.PlayMusic(mainTheme, 2);
-        }
-	}
+        
+    }
 }

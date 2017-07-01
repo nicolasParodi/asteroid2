@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class AudioManager : MonoBehaviour {
-    
-    public enum AudioChanel {Master, Sfx, Music};
 
-    float masterVolumePercent = 1;
-    float sfxVolumePrecent = 1;
-    float musicVolumePercent = 1;
+    public enum AudioChannel { Master, Sfx, Music };
 
+    public float masterVolumePercent { get; private set; }
+    public float sfxVolumePrecent { get; private set; }
+    public float musicVolumePercent { get; private set; }
+
+    AudioSource sfx2DSoruce;
     AudioSource[] musicSouces;
     int activeMusicSourceIndex;
 
@@ -26,25 +27,34 @@ public class AudioManager : MonoBehaviour {
         {
             Destroy(gameObject);
         }
-
-        instance = this;
-        DontDestroyOnLoad(gameObject);
-
-        library = GetComponent<SoundLibrary>();
-
-        musicSouces = new AudioSource[2];
-        for (int i =0; i < 2; i++)
+        else
         {
-            GameObject newMusicSource = new GameObject("Music source" + (i + 1));
-            musicSouces[i] = newMusicSource.AddComponent<AudioSource>();
-            newMusicSource.transform.parent = transform;
-        }
-        audiListener = FindObjectOfType<AudioListener>().transform;
-        playerT = FindObjectOfType<PlayerController>().transform;
+            instance = this;
+            DontDestroyOnLoad(gameObject);
 
-        masterVolumePercent = PlayerPrefs.GetFloat("master vol", masterVolumePercent);
-        sfxVolumePrecent = PlayerPrefs.GetFloat("sx vol", sfxVolumePrecent);
-        musicVolumePercent = PlayerPrefs.GetFloat("music vol", musicVolumePercent);
+            library = GetComponent<SoundLibrary>();
+
+            musicSouces = new AudioSource[2];
+            for (int i = 0; i < 2; i++)
+            {
+                GameObject newMusicSource = new GameObject("Music source" + (i + 1));
+                musicSouces[i] = newMusicSource.AddComponent<AudioSource>();
+                newMusicSource.transform.parent = transform;
+            }
+            GameObject newSfx2DSource = new GameObject("2D sfx source");
+            sfx2DSoruce = newSfx2DSource.AddComponent<AudioSource>();
+            newSfx2DSource.transform.parent = transform;
+
+            audiListener = FindObjectOfType<AudioListener>().transform;
+            if (FindObjectOfType<PlayerController>() != null)
+            {
+                playerT = FindObjectOfType<PlayerController>().transform;
+            }
+
+            masterVolumePercent = PlayerPrefs.GetFloat("master vol", 1);
+            sfxVolumePrecent = PlayerPrefs.GetFloat("sfx vol", 1);
+            musicVolumePercent = PlayerPrefs.GetFloat("music vol", 1);
+        }
     }
 
     void Update()
@@ -55,17 +65,17 @@ public class AudioManager : MonoBehaviour {
         }
     }
 
-    public void SetVolume(float volumePercent, AudioChanel channel)
+    public void SetVolume(float volumePercent, AudioChannel channel)
     {
         switch (channel)
         {
-            case AudioChanel.Master:
+            case AudioChannel.Master:
                 masterVolumePercent = volumePercent;
                 break;
-            case AudioChanel.Sfx:
+            case AudioChannel.Sfx:
                 sfxVolumePrecent= volumePercent;
                 break;
-            case AudioChanel.Music:
+            case AudioChannel.Music:
                 musicVolumePercent = volumePercent;
                 break;
         }
@@ -74,8 +84,9 @@ public class AudioManager : MonoBehaviour {
         musicSouces[1].volume = musicVolumePercent * masterVolumePercent;
 
         PlayerPrefs.SetFloat("master vol", masterVolumePercent);
-        PlayerPrefs.SetFloat("sx vol", sfxVolumePrecent);
+        PlayerPrefs.SetFloat("sfx vol", sfxVolumePrecent);
         PlayerPrefs.SetFloat("music vol", musicVolumePercent);
+        PlayerPrefs.Save();
     }
 
     public void PlayMusic(AudioClip clip, float fadeDuration = 1)
@@ -98,6 +109,11 @@ public class AudioManager : MonoBehaviour {
     public void PlaySound(string soundName, Vector3 pos)
     {
         PlaySound(library.GetClipFromName(soundName), pos);
+    }
+
+    public void PlaySound2D (string soundName)
+    {
+        sfx2DSoruce.PlayOneShot(library.GetClipFromName(soundName), sfxVolumePrecent * masterVolumePercent);
     }
 
     IEnumerator AnimateMusicCrossfade(float duration)

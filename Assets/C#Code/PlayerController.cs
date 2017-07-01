@@ -60,16 +60,15 @@ public class PlayerController : MonoBehaviour {
             GameObject bullet02 = (GameObject)Instantiate(Laser);
             bullet02.transform.position = LaserSpawn2.transform.position;
             disparoDerecha=false;
-            AudioManager.instance.PlaySound(AudioDisparo, transform.position);
+            AudioManager.instance.PlaySound2D("Player Shoot");
         }
         if (Input.GetButton("Fire1") && Time.time > nextFire && !disparoDerecha)
         {
-            transform.GetComponent<AudioSource>().PlayOneShot(AudioDisparo);
             nextFire = Time.time + fireRate;
             GameObject bullet01 = (GameObject)Instantiate(Laser);
             bullet01.transform.position = LaserSpawn1.transform.position;
             disparoDerecha = true;
-            AudioManager.instance.PlaySound(AudioDisparo, transform.position);
+            AudioManager.instance.PlaySound2D("Player Shoot");
         }
     }
 
@@ -100,7 +99,7 @@ public class PlayerController : MonoBehaviour {
 
 	void PlayerExplosion()
 	{
-        AudioManager.instance.PlaySound("Player Death", transform.position);
+        AudioManager.instance.PlaySound2D("Player Death");
         GameObject explosion = (GameObject)Instantiate (Explosio);
 		explosion.transform.position = transform.position;
         gameObject.SetActive(false);

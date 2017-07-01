@@ -47,7 +47,7 @@ public class Mover : MonoBehaviour
     }
     void AsteroidExplosion()
     {
-        AudioManager.instance.PlaySound("Enemy Destroy", transform.position);
+        AudioManager.instance.PlaySound2D("Enemy Destroy");
         transform.GetComponent<AudioSource>().PlayOneShot(AudioExplosion);
         GameObject explosion = (GameObject)Instantiate(Explosio);
         explosion.transform.position = transform.position;

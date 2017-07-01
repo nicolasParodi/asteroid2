@@ -4,14 +4,20 @@ using UnityEngine;
 
 public class GameScore : MonoBehaviour {
 
-    Text scoreTextUI;
-    Text highScoreTextUI;
+    public Text scoreTextUI;
+    public Text highScoreTextUI;
 
 
 	void Start () 
 	{
-        scoreTextUI = GameObject.FindGameObjectWithTag("ScoreTextTag").GetComponent<Text>();
-        highScoreTextUI = GameObject.FindGameObjectWithTag("HighScoreTextTag").GetComponent<Text>();
+        scoreTextUI.GetComponent<Text>();
+        highScoreTextUI.GetComponent<Text>(); 
+    }
+
+    public void RestartScore()
+    {
+        GameData.score = 0;
+        UpdateScoreTextUI();
     }
 
 

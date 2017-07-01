@@ -5,13 +5,13 @@ using UnityEngine;
 public class Pausa : MonoBehaviour {
 
     bool active;
-    Canvas canvas;
+    public GameObject panelPause;
 
 	// Use this for initialization
 	void Start ()
     {
-        canvas = GetComponent<Canvas>();
-        canvas.enabled = false;
+        panelPause.SetActive(false);
+
 	}
 	
 	// Update is called once per frame
@@ -20,15 +20,17 @@ public class Pausa : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.P))
         {
             active = true;
-            canvas.enabled = active;
+            panelPause.SetActive(active);
             Time.timeScale = (active) ? 0 : 1f;
+            Cursor.visible = active;
         }
 	}
 
     public void ResumeGame()
     {
         active = false;
-        canvas.enabled = active;
+        panelPause.SetActive(active);
         Time.timeScale = (active) ? 0 : 1f;
+        Cursor.visible = active;
     }
 }
