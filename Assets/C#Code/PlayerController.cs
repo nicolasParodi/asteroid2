@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using UnityEngine.EventSystems;
 
 [System.Serializable]
 public class Boundary {
@@ -25,8 +26,8 @@ public class PlayerController : MonoBehaviour {
     bool disparoDerecha = true;
 
 	public GameObject Laser;
-	public Transform LaserSpawn1;
-	public Transform LaserSpawn2;
+	public Transform laserSpawn1;
+	public Transform laserSpawn2;
 	public GameObject Explosio;
 
 	[SerializeField]
@@ -55,18 +56,18 @@ public class PlayerController : MonoBehaviour {
     }
 
 	void Update () {
-		if (Input.GetButton ("Fire1") && Time.time > nextFire && disparoDerecha) {
-            nextFire = Time.time + fireRate;
-            GameObject bullet02 = (GameObject)Instantiate(Laser);
-            bullet02.transform.position = LaserSpawn2.transform.position;
-            disparoDerecha=false;
-            AudioManager.instance.PlaySound2D("Player Shoot");
-        }
-        if (Input.GetButton("Fire1") && Time.time > nextFire && !disparoDerecha)
+        ObjectPool activate = GameObject.Find("Player").GetComponent<ObjectPool>();
+        if (Input.GetButton("Fire1") && Time.time > nextFire && disparoDerecha && Time.timeScale !=0)
         {
             nextFire = Time.time + fireRate;
-            GameObject bullet01 = (GameObject)Instantiate(Laser);
-            bullet01.transform.position = LaserSpawn1.transform.position;
+            activate.ActivateObjects(laserSpawn2.position, laserSpawn2.rotation);
+            disparoDerecha = false;
+            AudioManager.instance.PlaySound2D("Player Shoot");
+        }
+        if (Input.GetButton("Fire1") && Time.time > nextFire && !disparoDerecha && Time.timeScale != 0)
+        {
+            nextFire = Time.time + fireRate;
+            activate.ActivateObjects(laserSpawn1.position, laserSpawn1.rotation);
             disparoDerecha = true;
             AudioManager.instance.PlaySound2D("Player Shoot");
         }

@@ -39,7 +39,7 @@ public class AsteroidsSpawn : MonoBehaviour
 			bool didSpawn = false;
 			foreach (WaveComponent wc in waveComps) 
 			{
-				Vector3 pos = new Vector3 (Random.Range (-7.0f, 7.0f), 4.77f, -0.286828f);
+				Vector3 pos = new Vector3 (Random.Range (-6.11f, 6.36f), 6.76f, -0.286828f);
 				Instantiate (wc.enemyPrefab, pos, this.transform.rotation);
 				didSpawn = true;
 			}

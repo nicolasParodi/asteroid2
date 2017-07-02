@@ -23,6 +23,7 @@ public class GameController : MonoBehaviour
         Gameplay,
         GameOver,
         Restart,
+        Re_Play,
     }
 
     GameManagerState GMState;
@@ -45,14 +46,17 @@ public class GameController : MonoBehaviour
                 Cursor.visible = true;
                 SceneManager.LoadScene("Main Menu");
                 break;
+
             case GameManagerState.HowToPlay:
                 Cursor.visible = true;
                 SceneManager.LoadScene("How to Play");
                 break;
+
             case GameManagerState.Settings:
                 Cursor.visible = true;
                 SceneManager.LoadScene("Settings");
                 break;
+
             case GameManagerState.Gameplay:
                 Cursor.visible = false;
                 score.RestartScore();
@@ -76,6 +80,11 @@ public class GameController : MonoBehaviour
                 break;
 
             case GameManagerState.Restart:
+                Time.timeScale = (false) ? 0 : 1f;
+                Cursor.visible = false;
+                break;
+
+            case GameManagerState.Re_Play:
                 Cursor.visible = true;
                 gameOver.SetActive(false);
                 highScore.SetActive(true);
@@ -96,6 +105,11 @@ public class GameController : MonoBehaviour
     {
         GMState = GameManagerState.Gameplay;
         UpdateGameManagerState();
+    }
+
+    public void ChangeToRePlaytState()
+    {
+        SetGameManagerState(GameManagerState.Re_Play);
     }
 
     public void ChangeToRestartState()

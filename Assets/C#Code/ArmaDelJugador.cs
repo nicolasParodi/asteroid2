@@ -16,8 +16,8 @@ public class ArmaDelJugador : MonoBehaviour
 		transform.position = position;
 		Vector2 max = Camera.main.ViewportToWorldPoint (new Vector2 (1, 1));
 		if (transform.position.y > max.y) {
-			Destroy (gameObject);
-		}
+            gameObject.SetActive(false);
+        }
 	
 	}
 
@@ -25,7 +25,7 @@ public class ArmaDelJugador : MonoBehaviour
 	{
 		if((collider.tag == "Asteroid"))
 		{
-			Destroy(gameObject);
+            gameObject.SetActive(false);
 		}
 	}
 }

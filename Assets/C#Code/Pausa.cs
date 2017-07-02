@@ -4,33 +4,28 @@ using UnityEngine;
 
 public class Pausa : MonoBehaviour {
 
-    bool active;
-    public GameObject panelPause;
+    Canvas canvas;
 
 	// Use this for initialization
 	void Start ()
     {
-        panelPause.SetActive(false);
-
+        canvas = GetComponent<Canvas>();
+        canvas.enabled = false;
 	}
 	
 	// Update is called once per frame
 	void Update ()
     {
-        if (Input.GetKeyDown(KeyCode.P))
+        if (canvas.enabled==false && Input.GetKeyDown(KeyCode.P))
         {
-            active = true;
-            panelPause.SetActive(active);
-            Time.timeScale = (active) ? 0 : 1f;
-            Cursor.visible = active;
+            Pause();
         }
 	}
 
-    public void ResumeGame()
+    public void Pause()
     {
-        active = false;
-        panelPause.SetActive(active);
-        Time.timeScale = (active) ? 0 : 1f;
-        Cursor.visible = active;
+        canvas.enabled = !canvas.enabled;
+        Time.timeScale = Time.timeScale == 0 ? 1 : 0;
+        Cursor.visible = !Cursor.visible;
     }
 }
