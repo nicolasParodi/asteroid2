@@ -17,6 +17,7 @@ public class GameScore : MonoBehaviour {
         }
         else
         {
+            instance = this;
             if (scoreTextUI != null)
             {
                 scoreTextUI.GetComponent<Text>();

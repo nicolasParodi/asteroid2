@@ -14,7 +14,7 @@ public class Mover : MonoBehaviour
     void Start()
     {
         Posicion = transform;
-        scoreText = GameObject.FindGameObjectWithTag("ScoreManager").GetComponent<GameScore>();
+        scoreText = GameScore.instance;
         collider = GetComponent<Collider2D>();
     }
 

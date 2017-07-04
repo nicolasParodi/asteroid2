@@ -71,8 +71,12 @@ public class GameController : MonoBehaviour
 
             case GameManagerState.GameOver:
                 asteroids.GetComponent<AsteroidsSpawn>().Stop();
-                ArmaDelJugador laser = GameObject.FindWithTag("Laser").GetComponent<ArmaDelJugador>();
-                laser.DesactivarLasers();
+                GameObject laserGO = GameObject.FindWithTag("Laser");
+                if (laserGO != null)
+                {
+                    ArmaDelJugador laser = laserGO.GetComponent<ArmaDelJugador>();
+                    laser.DesactivarLasers();
+                }
                 gameOver.SetActive(true);
                 Invoke("ChangeToRePlaytState", 2.5f);
                 if (GameData.score > GameData.highScore)

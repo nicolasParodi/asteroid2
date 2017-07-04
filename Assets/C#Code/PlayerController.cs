@@ -56,18 +56,18 @@ public class PlayerController : MonoBehaviour {
     }
 
 	void Update () {
-        ObjectPool activate = GameObject.Find("Player").GetComponent<ObjectPool>();
+        ObjectPool objectPool = GameObject.Find("Player").GetComponent<ObjectPool>();
         if (Input.GetButton("Fire1") && Time.time > nextFire && disparoDerecha && Time.timeScale !=0)
         {
             nextFire = Time.time + fireRate;
-            activate.ActivateObjects(laserSpawn2.position, laserSpawn2.rotation);
+            objectPool.ActivateObjects(laserSpawn2.position, laserSpawn2.rotation);
             disparoDerecha = false;
             AudioManager.instance.PlaySound2D("Player Shoot");
         }
         if (Input.GetButton("Fire1") && Time.time > nextFire && !disparoDerecha && Time.timeScale != 0)
         {
             nextFire = Time.time + fireRate;
-            activate.ActivateObjects(laserSpawn1.position, laserSpawn1.rotation);
+            objectPool.ActivateObjects(laserSpawn1.position, laserSpawn1.rotation);
             disparoDerecha = true;
             AudioManager.instance.PlaySound2D("Player Shoot");
         }

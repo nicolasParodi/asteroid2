@@ -12,7 +12,7 @@ public class ScrollingBG : MonoBehaviour {
 
 		Vector2 offset = mat.mainTextureOffset;
 
-		offset.y += Time.deltaTime ;
+		offset.y += Time.deltaTime;
 
 		mat.mainTextureOffset = offset;
 
