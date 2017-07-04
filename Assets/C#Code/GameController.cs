@@ -30,6 +30,7 @@ public class GameController : MonoBehaviour
 
     void Start()
     {
+        score.RestartScore();
         AudioManager.instance.PlayMusic(gameMusic, 2);
         Cursor.visible = false;
         highScoreUI.GetComponent<GameObject>();
@@ -70,8 +71,10 @@ public class GameController : MonoBehaviour
 
             case GameManagerState.GameOver:
                 asteroids.GetComponent<AsteroidsSpawn>().Stop();
+                ArmaDelJugador laser = GameObject.FindWithTag("Laser").GetComponent<ArmaDelJugador>();
+                laser.DesactivarLasers();
                 gameOver.SetActive(true);
-                Invoke("ChangeToRestartState", 2.5f);
+                Invoke("ChangeToRePlaytState", 2.5f);
                 if (GameData.score > GameData.highScore)
                 {
                     GameData.highScore = GameData.score;
@@ -114,6 +117,7 @@ public class GameController : MonoBehaviour
 
     public void ChangeToRestartState()
     {
+        score.RestartScore();
         SetGameManagerState(GameManagerState.Restart);
     }
 

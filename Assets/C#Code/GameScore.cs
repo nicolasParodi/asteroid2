@@ -6,12 +6,26 @@ public class GameScore : MonoBehaviour {
 
     public Text scoreTextUI;
     public Text highScoreTextUI;
+    public static GameScore instance;
+    int highScore;
 
+    void Awake()
+    {
+        if (instance != null)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            if (scoreTextUI != null)
+            {
+                scoreTextUI.GetComponent<Text>();
+            }
+            highScoreTextUI.GetComponent<Text>();
 
-	void Start () 
-	{
-        scoreTextUI.GetComponent<Text>();
-        highScoreTextUI.GetComponent<Text>(); 
+            highScore = PlayerPrefs.GetInt("high Score Text UI");
+            UpdateHighScoreTextUI();
+        }
     }
 
     public void RestartScore()
@@ -29,7 +43,9 @@ public class GameScore : MonoBehaviour {
 
     public void UpdateHighScoreTextUI()
     {
-        string scoreStr = string.Format("{0:0000000}", GameData.highScore);
-        highScoreTextUI.text = scoreStr;
+        string highScoreStr = string.Format("{0:0000000}", GameData.highScore);
+        highScoreTextUI.text = highScoreStr;
+        PlayerPrefs.SetInt("high Score Text UI", GameData.highScore);
+        PlayerPrefs.Save();
     }
 }

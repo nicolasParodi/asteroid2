@@ -21,6 +21,11 @@ public class ArmaDelJugador : MonoBehaviour
 	
 	}
 
+    public void DesactivarLasers()
+    {
+        gameObject.SetActive(false);
+    }
+
 	void OnTriggerEnter2D(Collider2D collider)
 	{
 		if((collider.tag == "Asteroid"))
